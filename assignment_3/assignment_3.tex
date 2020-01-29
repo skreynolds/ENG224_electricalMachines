@@ -1,0 +1,641 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements
+\usepackage{enumerate} % Required for the enumerate function
+\usepackage{circuitikz} % Required for the drawing of circuit diagrams
+\usepackage{graphicx}
+\usepackage{xfrac}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Charles Darwin University, School of Engineering} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Electrical Machines and Power Systems Assignment 1 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Shane Reynolds} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Assignment 1.1}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (2,0)
+	to [short, -o] (3,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+	R_{eq} = 1 \si{\ohm}
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=2\si{\ohm}] (2,0)
+	to [short, -o] (3,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} = 2 \si{\ohm}
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=3\si{\ohm}] (2,0)
+	to [short, -o] (3,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} = 3 \si{\ohm}
+\end{align*}
+
+\newpage
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (2,0)
+	to [short] (3,0)
+	to [R, l^=2\si{\ohm}] (4,0)
+	to [short, -o] (5,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} + R_{2} \\
+&= 3 \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (2,0)
+	to [short] (3,0)
+	to [R, l^=3\si{\ohm}] (4,0)
+	to [short, -o] (5,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} + R_{3} \\
+&= 4 \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=2\si{\ohm}] (2,0)
+	to [short] (3,0)
+	to [R, l^=3\si{\ohm}] (4,0)
+	to [short, -o] (5,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{2} + R_{3} \\
+&= 5 \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (2,0)
+	to [short] (3,0)
+	to [R, l^=2\si{\ohm}] (4,0)
+	to [short] (5,0)
+	to [R, l^=3\si{\ohm}] (6,0)
+	to [short, -o] (7,0)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} + R_{2} + R_{3} \\
+&= 6 \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (1,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (1,0)
+	to [short] (3,0)
+	to [R, l^=2\si{\ohm}] (3,-2)
+	to [short] (1,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} || R_{2} \\
+&= \frac{2}{3} \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (1,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (1,0)
+	to [short] (3,0)
+	to [R, l^=3\si{\ohm}] (3,-2)
+	to [short] (1,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} || R_{3} \\
+&= \frac{3}{4} \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=2\si{\ohm}] (1,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (1,0)
+	to [short] (3,0)
+	to [R, l^=3\si{\ohm}] (3,-2)
+	to [short] (1,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{2} || R_{3} \\
+&= \frac{6}{5} \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (1,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (1,0)
+	to [short] (3,0)
+	to [R, l^=2\si{\ohm}] (3,-2)
+	to [short] (1,-2)
+	;
+	
+	\draw (3,0)
+	to [short] (5,0)
+	to [R, l^=3\si{\ohm}] (5,-2)
+	to [short] (3,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} || R_{2} || R_{3} \\
+&= \frac{6}{11} \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=1\si{\ohm}] (3,0)
+	to [short] (4,0)
+	to [R, l^=2\si{\ohm}] (4,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (4,0)
+	to [short] (6,0)
+	to [R, l^=3\si{\ohm}] (6,-2)
+	to [short] (4,-2)
+	;	
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{1} + R_{2} || R_{3} \\
+&= \frac{11}{5} \si{\ohm} 
+\end{align*}
+
+\newpage
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=2\si{\ohm}] (3,0)
+	to [short] (4,0)
+	to [R, l^=1\si{\ohm}] (4,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (4,0)
+	to [short] (6,0)
+	to [R, l^=3\si{\ohm}] (6,-2)
+	to [short] (4,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{2} + R_{1} || R_{3} \\
+&= \frac{11}{4} \si{\ohm} 
+\end{align*}
+
+\begin{circuitikz}
+	\draw (0,0)
+	to [short, o-] (1,0)
+	to [R, l^=3\si{\ohm}] (3,0)
+	to [short] (4,0)
+	to [R, l^=2\si{\ohm}] (4,-2)
+	to [short, -o] (0,-2)
+	;
+	
+	\draw (4,0)
+	to [short] (6,0)
+	to [R, l^=1\si{\ohm}] (6,-2)
+	to [short] (4,-2)
+	;
+\end{circuitikz}
+
+\begin{align*}
+R_{eq} &= R_{3} + R_{2} || R_{1} \\
+&= \frac{11}{3} \si{\ohm} 
+\end{align*} \\
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section*{Assignment 1.2}
+
+\begin{circuitikz}
+	
+	\draw (0,0) node[label={[font=\footnotesize]left:C}] {}
+	to [battery1, l^=12 \si{\volt}] (0,4)
+	to [short, -*] (0,4) node[label={[font=\footnotesize]left:A}] {}
+	to [R, l^=1.6\si{\ohm}] (2,4)
+	to [R, l^=4\si{\ohm}] (2,0)
+	to [short, -*] (0,0)
+	;
+	
+	\draw (2,4)
+	to [short, -*] (4,4) node[label={[font=\footnotesize]right:B}] {}
+	to [R, l^=6\si{\ohm}] (4, 0)
+	to [short] (2,0)
+	;
+	
+\end{circuitikz}
+
+Node C \\
+$v_{C} = 0 \si{\volt}$, since this is the ground node.
+\\
+
+Node A \\
+$v_{A} = 12 \si{\volt}$
+\\
+
+Node B \\
+By KCL, we get the following equation: \\
+\begin{align*}
+	\frac{v_{B} - 12}{1.6} + \frac{v_{B}}{4} + \frac{v_{B}}{6} &= 0 \\
+	v_{C}(\frac{1}{1.6} + \frac{1}{4} + \frac{1}{6}) &= \frac{12}{1.6} \\
+	v_{C} &= \frac{12}{1.6}(\frac{1}{1.6} + \frac{1}{4} + \frac{1}{6})^{-1} \\
+	v_{C} &= 7.2 \si{\volt}
+\end{align*}
+
+\subsection*{Question 1.2.1}
+
+We can reduce the circuit down to a single equivalent resistor and the battery to obtain the current supplied from the battery to the load. The equivalent resistor is given by:
+
+\begin{align*}
+R_{eq} &= R_{1.6\si{\ohm}} + R_{4\si{\ohm}}||R_{6\si{\ohm}} \\
+&= 4 \si{\ohm}
+\end{align*}
+
+\newpage
+
+Now, using Ohm's law, we can solve for the current in the circuit. That is:
+
+\begin{align*}
+V &= iR_{eq} \\
+i &= \frac{V}{R_{eq}} \\
+&= \frac{12}{4} \\
+&= 3 \si{\ampere}
+\end{align*}
+
+Hence the power supplied from the battery to the load is given by:
+
+\begin{align*}
+p &= Vi \\
+p &= iR_{eq}i \\
+p &= i^{2}R_{eq} \\
+&= 3^2 \times 4 \\
+&= 36 \si{\watt}
+\end{align*}
+
+\subsection*{Question 1.2.2}
+
+This question has been solved using the node voltages found earlier.
+
+The current flowing from Node A to Node B through $R_{1.6 \si{\ohm}}$ is given by:
+\begin{align*}
+i &= \frac{v_{A} - v_{B}}{R_{1.6 \si{\ohm}}} \\
+&= \frac{12 - 7.2}{1.6} \\
+&= 3 \si{\ampere}
+\end{align*}
+
+The current flowing from Node B to Node C through $R_{4 \si{\ohm}}$ is given by:
+\begin{align*}
+i &= \frac{v_{B} - v_{C}}{R_{4 \si{\ohm}}} \\
+&= \frac{7.2}{4} \\
+&= 1.8 \si{\ampere}
+\end{align*}
+
+The current flowing from Node B to Node C through $R_{6 \si{\ohm}}$ is given by:
+\begin{align*}
+i &= \frac{v_{B} - v_{C}}{R_{6 \si{\ohm}}} \\
+&= \frac{7.2}{6} \\
+&= 1.2 \si{\ampere}
+\end{align*}
+
+\subsection*{Question 1.2.2}
+
+This question has been solved using the node voltages found earlier.
+
+The power consumed by resistor $R_{1.6 \si{\ohm}}$ is given by:
+
+\begin{align*}
+p &= \frac{(v_{A} - v_{B})^2}{R_{1.6\si{\ohm}}} \\
+&= \frac{(12 - 7.2)^2}{1.6} \\
+&= 14.4 \si{\watt}
+\end{align*}
+
+The power consumed by resistor $R_{4 \si{\ohm}}$ is given by:
+
+\begin{align*}
+p &= \frac{(v_{B} - v_{C})^2}{R_{6\si{\ohm}}} \\
+&= \frac{(7.2 - 0)^2}{4} \\
+&= 12.96 \si{\watt}
+\end{align*}
+
+The power consumed by resistor $R_{1.6 \si{\ohm}}$ is given by:
+
+\begin{align*}
+p &= \frac{(v_{B} - v_{C})^2}{R_{1.6\si{\ohm}}} \\
+&= \frac{(7.2 - 0)^2}{6} \\
+&= 8.64 \si{\watt}
+\end{align*}
+
+\subsection*{Question 1.2.4}
+This question has been solved using the node voltages found earlier.
+The voltages across each resistor are as follows:
+
+\begin{align*}
+v_{R_{1.6\si{\ohm}}} &= 12 - 7.2 \\
+&= 4.8\si{\volt}
+\end{align*}
+
+\begin{align*}
+v_{R_{4\si{\ohm}}} &= 7.2 - 0 \\
+&= 7.2\si{\volt}
+\end{align*}
+
+\begin{align*}
+v_{R_{6\si{\ohm}}} &= 7.2 - 0 \\
+&= 7.2\si{\volt}
+\end{align*}
+
+\subsection*{Question 1.2.5}
+
+The aggregate power consumed from the load is equal to 36$\si{\watt}$ which is equal to the power produced by the source.
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section*{Assignment 1.3}
+
+\begin{circuitikz}
+	
+	\draw (0,0)
+	to [sV, l^=$v(t)$] (0,4)
+	to [short] (0,4) 
+	to [R, l^=40\si{\ohm}] (2,4)
+	to [L, l^=127.324\si{\milli\henry}] (4,4)
+	to [C, l^=318.3\si{\micro\farad}] (4,0)
+	to [short] (0,0)
+	;
+\end{circuitikz}
+
+The sinusoidal voltage source is 240 volts with a 50 Hz frequency. This means that:
+\begin{align*}
+f = 50 \si{\hertz} \\
+\omega = 2 \pi f = 100 \pi
+\end{align*}
+
+Further,
+
+\begin{align*}
+V_{rms} &= \frac{V_{m}}{\sqrt{2}} \\
+V_{m} &= V_{rms} \times \sqrt{2} \\
+&= 240 \sqrt{2}
+\end{align*}
+
+Hence,
+
+\begin{align*}
+v(t) = 240\sqrt{2} \cos(100\pi t)
+\end{align*}
+
+In phasor form,
+
+\begin{align*}
+v(t) = 240\sqrt{2}\angle 0\si{\degree}
+\end{align*}
+
+\newpage
+
+The impedance of the resistor is $Z_{R} = 40 \si{\ohm}$. The impedance of the inductor is given by:
+
+\begin{align*}
+Z_{L} &= j\omega L \\
+&= j \times 100\pi \times 127.324e-3 \si{\ohm} \\
+&= j40 \si{\ohm} \\
+&= 40 \angle 90 \si{\degree} \si{\ohm}
+\end{align*}
+
+The impedance of the capacitor is given by:
+
+\begin{align*}
+Z_{C} &= \frac{1}{j \omega C} \\
+&= \frac{1}{j \times 100\pi \times 318.3e-6} \si{\ohm} \\
+&= \frac{10}{j} \si{\ohm} \\
+&= -j10 \si{\ohm} \\
+&= 10 \angle -90 \si{\degree} \si{\ohm} \\
+\end{align*}
+
+\subsection*{Question 1.3.1}
+Now to find the current we can sum the impedances (because they are in series) and apply Ohm's law to solve for the current.
+
+\begin{align*}
+Z_{eq} &= Z_{R} + Z_{L} + Z_{C} \\
+&= 40 + j40 - j10 \\
+&= 40 + j30 \\
+&= 50 \angle 36.86 \si{\degree}
+\end{align*}
+
+Hence, the current is given by:
+\begin{align*}
+\textbf{V} &= \textbf{I}Z_{eq} \\
+\textbf{I} &= \frac{\textbf{V}}{Z_{eq}} \\
+&= \frac{240 \sqrt{2} \angle 0 \si{\degree}}{50 \angle 36.86 \si{\degree}} \\
+&= 6.79 \angle -36.86\si{\degree}
+\end{align*}
+
+Hence,
+\begin{align*}
+I_{rms} &= \frac{6.79}{\sqrt{2}} \\
+&= 4.80 \si{\ampere}
+\end{align*}
+
+Now, we get the real power according to the following formula:
+
+\begin{align*}
+P = V_{rms}I_{rms}\cos(\theta),
+\end{align*}
+
+where $\theta$ is the difference between the voltage and current phase angles. \\
+
+Hence,
+
+\begin{align*}
+P &= 240 \times 4.8 \times \cos(-36.86) \\
+&= 921 \si{\watt}
+\end{align*}
+
+The average power consumed by the resistor is given by:
+
+\begin{align*}
+P &= I_{rms}^2 R \\
+&= 4.8^2 \times 40 \\
+&= 921.60 \si{\watt}
+\end{align*}
+
+The two values align, indicating that the resistor consumes all of the real power delivered by the source.
+
+\subsection*{Question 1.3.2}
+
+The power factor at which the power is delivered is given by:
+
+\begin{align*}
+PF &= \cos(\theta)
+&= \cos(-36.86\si{\degree})
+&= 0.8
+\end{align*}
+
+\subsection*{Question 1.3.3}
+
+%The current is leading the voltage, since the power angle is -36.86 $\degree$. This means that the alternating current reaches its maximum value before the alternating voltage.
+
+\subsection*{Question 1.3.4}
+
+The voltage across the resistor is given by:
+
+\begin{align*}
+\textbf{V}_{R} &= \textbf{I}R \\
+&= 6.79 \angle -36.86\si{\degree} \times 40 \angle 0\si{\degree}\\
+&= 271.6 \si{\degree} -36.86\degree \si{\volt}
+\end{align*}
+
+\newpage
+
+The voltage across the inductor is given by:
+
+\begin{align*}
+\textbf{V}_{L} &= \textbf{I}Z_{L} \\
+&= 6.79 \angle -36.86\degree \times 40 \angle 90\degree \\
+&= 271.6 \angle 53.14\degree \volt
+\end{align*}
+
+The voltage across the capacitor is given by:
+
+\begin{align*}
+\textbf{V}_{C} &= \textbf{I}Z_{C} \\
+&= 6.79 \angle -36.86\degree \times 10 \angle -90\degree \\
+&= 67.9 \angle -126.86\degree \volt
+\end{align*}
+
+
+
+\end{document}
