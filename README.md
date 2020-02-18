@@ -5,25 +5,25 @@
 Unit covers the theory and practice of electrical machines and power systems as used in electrical engineering.
 
 The following topics are covered on electrical machines:
-*review magnetic circuits & materials;
-*coupled circuits and dot convention;
-*the principle of electromechanical energy conversion;
-*transformers;
-*direct current machines;
-*synchronous machines;
-*induction machines;
-*the basic structure of a power system;
-*electric power generation; and
-*single and three phase systems.
+* review magnetic circuits & materials;
+* coupled circuits and dot convention;
+* the principle of electromechanical energy conversion;
+* transformers;
+* direct current machines;
+* synchronous machines;
+* induction machines;
+* the basic structure of a power system;
+* electric power generation; and
+* single and three phase systems.
 
 The following topics are covered on power systems:
-*three phase transformers;
-*switch gear and protection equipment;
-*voltage drop;
-*power factor correction;
-*earthing;
-*protection equipment ratings; and
-*per-unit system.
+* three phase transformers;
+* switch gear and protection equipment;
+* voltage drop;
+* power factor correction;
+* earthing;
+* protection equipment ratings; and
+* per-unit system.
 
 ## Unit Learning Outcomes
 1. Analyse and solve problems related to electrical machines.
